@@ -136,6 +136,7 @@ class BaseLot(BaseResourceItem):
     description_ru = StringType()
     lotCustodian = ModelType(Organization, required=True)
     documents = ListType(ModelType(Document), default=list())  # All documents and attachments related to the lot.
+    _internal_type = None
 
     create_accreditation = 1
     edit_accreditation = 2
