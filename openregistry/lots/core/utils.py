@@ -56,7 +56,8 @@ def generate_lot_id(ctime, db, server_id=''):
         else:
             break
 
-    return project_configurator.LOT_PREFIX + '-{:04}-{:02}-{:02}-{:06}{}'.format(
+    return '{}-{:04}-{:02}-{:02}-{:06}{}'.format(
+        project_configurator.LOT_PREFIX,
         ctime.year,
         ctime.month,
         ctime.day,
